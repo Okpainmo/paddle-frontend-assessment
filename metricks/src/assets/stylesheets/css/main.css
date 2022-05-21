@@ -1,0 +1,22 @@
+:root {
+  --brown: #7f4129;
+  --purple_light: #7f1e7b;
+  --purple-deep_a: #19073b;
+  --purple-deep_b: #1c0c28;
+  --blue-deep: #213f72;
+  --blue-light: #271ac1;
+  --grey_a: #707070;
+  --grey_b: #09090991;
+  --ice_a: #f6f7f9;
+  --ice_b: #00000012;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
