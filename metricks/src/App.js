@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ScrollHandler from './assets/super-components/ScrollHandler';
+import ScrollHandler from './assets/global-components/ScrollHandler';
+// import Navbar from './assets/global-components/Navbar';
 
 // pages
 
@@ -10,19 +11,22 @@ import GithubStarsPage from './assets/pages/github-stars-page';
 import ContactPage from './assets/pages/contact-us-page';
 import BlogHomePage from './assets/pages/blog-home-page';
 import BlogPostPage from './assets/pages/blog-post-page';
+import Pager from './assets/global-components/Pager';
 
 function App() {
   return (
     <div>
       <ScrollHandler>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/blog" element={<BlogHomePage />} />
-          <Route path="/post" element={<BlogPostPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/github" element={<GithubStarsPage />} />
-        </Routes>
+        <Pager>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/blog" element={<BlogHomePage />} />
+            <Route path="/post" element={<BlogPostPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/github" element={<GithubStarsPage />} />
+          </Routes>
+        </Pager>
       </ScrollHandler>
     </div>
   );

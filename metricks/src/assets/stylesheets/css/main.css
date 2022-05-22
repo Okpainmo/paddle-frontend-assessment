@@ -1,11 +1,11 @@
 :root {
-  --brown: #7f4129;
-  --purple_light: #7f1e7b;
+  --purple-light: #7f1e7b;
   --purple-deep_a: #19073b;
-  --purple-deep_b: #1c0c28;
   --blue-deep: #213f72;
-  --blue-light: #271ac1;
+  --brown: #7f4129;
+  --purple-deep_b: #1c0c28;
   --grey_a: #707070;
+  --blue-light: #271ac1;
   --grey_b: #09090991;
   --ice_a: #f6f7f9;
   --ice_b: #00000012;
@@ -18,5 +18,187 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
+  color: white !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  color: white !important;
+}
+nav a {
+  color: white !important;
+}
+nav .navbar-brand {
+  margin-left: 60px;
+}
+nav .navbar-item:hover:after {
+  width: 100%;
+  transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav .navbar-item:after {
+  content: "";
+  background-color: white;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.landing-page {
+  position: relative;
+  z-index: 10;
+}
+.landing-page .banner .lead-text {
+  position: relative;
+}
+.landing-page .banner .lead-text:before {
+  content: "";
+  display: block;
+  content: "";
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--purple-light), var(--purple-deep_a));
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+.landing-page .banner .follow-up-text {
+  position: relative;
+}
+.landing-page .banner .follow-up-text:after {
+  content: "";
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--blue-deep), var(--purple-deep_a));
+  top: 100px;
+  right: 220px;
+}
+.landing-page .counter .counter-wrapper {
+  margin-top: 30px;
+}
+.landing-page .counter .counter-wrapper .counter-card {
+  width: 80px;
+  height: 90px;
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landing-page .counter .counter-wrapper .counter-card .count {
+  font-size: 30px;
+  font-weight: 600;
+}
+.landing-page .counter .counter-wrapper .counter-card .text {
+  font-size: 12px;
+}
+.landing-page .banner-forms {
+  margin: 50px auto 0;
+  padding: 0 10px;
+  width: 600px;
+}
+.landing-page .banner-forms form .form-group input {
+  background-color: transparent;
+  border: 0;
+  width: 42%;
+  color: var(--grey_a);
+  border-bottom: 1px solid var(--grey_a);
+  padding: 10px 15px;
+}
+.landing-page .banner-forms form .form-group input:focus-visible {
+  outline: 0;
+}
+.landing-page .banner-forms form .waitlist-input-wrapper {
+  background-color: white;
+  width: 100%;
+  margin-top: 25px;
+}
+.landing-page .banner-forms form .waitlist-input-wrapper .waitlist-input {
+  color: var(--grey_a);
+  padding: 12px 20px;
+  width: 65%;
+  border: 0;
+  border-radius: inherit;
+}
+.landing-page .banner-forms form .waitlist-input-wrapper .waitlist-input:focus-visible {
+  outline: 0;
+}
+.landing-page .banner-forms form .waitlist-input-wrapper .waitlist-input-button {
+  width: 35%;
+  padding: 14px 10px;
+  color: white;
+  height: inherit;
+  background-color: var(--blue-light);
+  font-size: 13px;
+}
+.landing-page .banner-forms form .waitlist-input-wrapper .waitlist-input-button:hover {
+  border-color: var(--blue-light);
+}
+.landing-page footer {
+  margin-top: 90px;
+  height: 200px;
+  overflow: hidden;
+  color: var(--grey_a);
+}
+.landing-page footer a {
+  color: var(--grey_a);
+}
+.landing-page footer a:hover {
+  color: white;
+  transition: color ease 0.75s;
+}
+.landing-page footer i:hover {
+  color: white;
+  transition: color ease 0.75s;
+}
+.landing-page footer .glass-bg {
+  width: 1200px;
+  height: 1200px;
+  border-radius: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 80px;
+  border: 1px solid var(--grey_a);
+  background: rgba(127, 30, 123, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1000;
+}
+.landing-page footer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--brown), var(--purple-deep_a));
+  bottom: 80px;
+  left: 320px;
+  z-index: 100;
+  position: absolute;
 }

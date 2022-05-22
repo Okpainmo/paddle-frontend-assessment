@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 /* This component returns every page back to the top. 
-It remedies for the issue(in react-router-dom) of opening new pages at 
-the viewport area scrolled up to in the previous page */
+It remedies for the issue(in react-router-dom v6) of opening new pages at 
+the viewport area scrolled up-to in a previous page */
 
 function ScrollHandler({ children }) {
   const location = useLocation();

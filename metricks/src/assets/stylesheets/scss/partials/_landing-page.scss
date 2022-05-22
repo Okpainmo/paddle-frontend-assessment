@@ -1,0 +1,147 @@
+@use '../utilities/mixins' as mix;
+
+.landing-page {
+  // background-image: url(../../images/Path\ 1.svg);
+  // background-size: cover;
+  position: relative;
+  z-index: 10;
+  .banner {
+    .lead-text {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        @include mix.ball-gradient(100px);
+        background-image: linear-gradient(
+          var(--purple-light),
+          var(--purple-deep_a)
+        );
+        position: absolute;
+        top: 0;
+        left: 200px;
+      }
+    }
+    .follow-up-text {
+      position: relative;
+      &:after {
+        @include mix.ball-gradient(70px);
+        background-image: linear-gradient(
+          var(--blue-deep),
+          var(--purple-deep_a)
+        );
+        top: 100px;
+        right: 220px;
+      }
+    }
+  }
+  .counter {
+    .counter-wrapper {
+      margin-top: 30px;
+      .counter-card {
+        width: 80px;
+        height: 90px;
+        background-color: white;
+        color: black;
+        padding: 15px;
+        border-radius: 7px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .count {
+          font-size: 30px;
+          font-weight: 600;
+        }
+        .text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .banner-forms {
+    margin: 50px auto 0;
+    padding: 0 10px;
+    width: 600px;
+    form {
+      .form-group {
+        input {
+          background-color: transparent;
+          border: 0;
+          width: 42%;
+          color: var(--grey_a);
+          border-bottom: 1px solid var(--grey_a);
+          padding: 10px 15px;
+          &:focus-visible {
+            outline: 0;
+          }
+        }
+      }
+      .waitlist-input-wrapper {
+        background-color: white;
+        width: 100%;
+        margin-top: 25px;
+        .waitlist-input {
+          color: var(--grey_a);
+          padding: 12px 20px;
+          width: 65%;
+          border: 0;
+          border-radius: inherit;
+          &:focus-visible {
+            outline: 0;
+          }
+        }
+        .waitlist-input-button {
+          width: 35%;
+          padding: 14px 10px;
+          color: white;
+          height: inherit;
+          background-color: var(--blue-light);
+          font-size: 13px;
+          &:hover {
+            border-color: var(--blue-light);
+          }
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: 90px;
+    height: 200px;
+    overflow: hidden;
+    color: var(--grey_a);
+    a {
+      color: var(--grey_a);
+      &:hover {
+        color: white;
+        transition: color ease 0.75s;
+      }
+    }
+    i:hover {
+      color: white;
+      transition: color ease 0.75s;
+    }
+    .glass-bg {
+      width: 1200px;
+      height: 1200px;
+      border-radius: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 80px;
+      border: 1px solid var(--grey_a);
+      background: rgba(127, 30, 123, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 1000;
+    }
+    &:before {
+      @include mix.ball-gradient(150px);
+      background-image: linear-gradient(var(--brown), var(--purple-deep_a));
+      bottom: 80px;
+      left: 320px;
+      z-index: 100;
+      position: absolute;
+    }
+  }
+}

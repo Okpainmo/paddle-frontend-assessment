@@ -1,0 +1,28 @@
+nav {
+  color: white !important;
+  a {
+    color: white !important;
+  }
+  .navbar-brand {
+    margin-left: 60px;
+  }
+  .navbar-item {
+    &:hover {
+      &:after {
+        width: 100%;
+        transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+    &:after {
+      content: '';
+      background-color: white;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
