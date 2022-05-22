@@ -25,17 +25,17 @@ function Navbar() {
           id="navbarNav"
         >
           <ul className="navbar-nav me-5">
-            <li className="nav-item mx-4">
+            <li className="nav-item nav-text mx-4">
               <Link to="/about" className="nav-link active" aria-current="page">
                 About
               </Link>
             </li>
-            <li className="nav-item mx-4">
+            <li className="nav-item nav-text mx-4">
               <Link to="/blog" className="nav-link">
                 Blog
               </Link>
             </li>
-            <li className="nav-item mx-4">
+            <li className="nav-item nav-text mx-4">
               <Link to="/github" className="nav-link">
                 Github
               </Link>

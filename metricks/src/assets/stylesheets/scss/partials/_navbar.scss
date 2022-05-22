@@ -6,13 +6,8 @@ nav {
   .navbar-brand {
     margin-left: 60px;
   }
-  .navbar-item {
-    &:hover {
-      &:after {
-        width: 100%;
-        transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
-      }
-    }
+  .nav-text {
+    position: relative;
     &:after {
       content: '';
       background-color: white;
@@ -23,6 +18,12 @@ nav {
       right: 0;
       display: block;
       margin: 0 auto;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+        transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+      }
     }
   }
 }

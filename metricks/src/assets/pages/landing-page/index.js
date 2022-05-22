@@ -1,5 +1,6 @@
 import React from 'react';
-import Footer from './components/Footer';
+// import Footer from '../../global-components/Footer';
+import RoundedBase from './components/RoundedBase';
 
 function LandingPage() {
   return (
@@ -58,7 +59,7 @@ function LandingPage() {
             </form>
           </section>
         </section>
-        <Footer />
+        <RoundedBase />
       </main>
     </>
   );

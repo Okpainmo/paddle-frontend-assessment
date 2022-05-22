@@ -37,11 +37,10 @@ nav a {
 nav .navbar-brand {
   margin-left: 60px;
 }
-nav .navbar-item:hover:after {
-  width: 100%;
-  transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+nav .nav-text {
+  position: relative;
 }
-nav .navbar-item:after {
+nav .nav-text:after {
   content: "";
   background-color: white;
   width: 0;
@@ -51,6 +50,26 @@ nav .navbar-item:after {
   right: 0;
   display: block;
   margin: 0 auto;
+}
+nav .nav-text:hover:after {
+  width: 100%;
+  transition: width 0.95s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+footer {
+  margin: 0 0 30px;
+  color: #a6a8aa;
+}
+footer a {
+  color: #a6a8aa;
+}
+footer a:hover {
+  color: white;
+  transition: color ease 0.75s;
+}
+footer i:hover {
+  color: white;
+  transition: color ease 0.75s;
 }
 
 .landing-page {
@@ -156,24 +175,12 @@ nav .navbar-item:after {
 .landing-page .banner-forms form .waitlist-input-wrapper .waitlist-input-button:hover {
   border-color: var(--blue-light);
 }
-.landing-page footer {
-  margin-top: 90px;
-  height: 200px;
+.landing-page .base {
+  height: 210px;
   overflow: hidden;
-  color: var(--grey_a);
+  margin-top: 100px;
 }
-.landing-page footer a {
-  color: var(--grey_a);
-}
-.landing-page footer a:hover {
-  color: white;
-  transition: color ease 0.75s;
-}
-.landing-page footer i:hover {
-  color: white;
-  transition: color ease 0.75s;
-}
-.landing-page footer .glass-bg {
+.landing-page .base .round-glass-bg {
   width: 1200px;
   height: 1200px;
   border-radius: 100%;
@@ -187,7 +194,7 @@ nav .navbar-item:after {
   position: relative;
   z-index: 1000;
 }
-.landing-page footer:before {
+.landing-page .base:before {
   content: "";
   display: block;
   position: absolute;
@@ -201,4 +208,125 @@ nav .navbar-item:after {
   left: 320px;
   z-index: 100;
   position: absolute;
+}
+
+.about-page {
+  position: relative;
+  z-index: 10000;
+}
+.about-page .main-top .glass-bg-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 60%;
+  height: 525px;
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.about-page .main-top .behind-content-1 {
+  width: 250px;
+  height: 350px;
+  background-color: var(--purple-light);
+  position: absolute;
+  top: 105px;
+  left: 470px;
+  z-index: 1;
+}
+.about-page .main-top .page-intro {
+  padding: 200px 50px 50px 400px;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 100px;
+}
+.about-page .main-top .page-intro .about:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  transform: translateY(-5px);
+}
+.about-page .main-top .page-intro h1 {
+  padding-left: 100px;
+  font-size: 50px;
+}
+.about-page .main-top .page-intro .detail-text-1 {
+  width: 40%;
+  margin: 100px 100px 0 auto;
+}
+.about-page .details-section .glass-bg-2 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 53%;
+  height: 490px;
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: 885px;
+  right: 0;
+}
+.about-page .details-section .behind-content-2 {
+  width: 250px;
+  height: 300px;
+  background-color: var(--blue-deep);
+  position: absolute;
+  top: 960px;
+  right: 290px;
+  z-index: 1;
+}
+.about-page .details-section .main-details-section {
+  position: relative;
+  z-index: 100;
+  margin-top: 150px;
+}
+.about-page .details-section .main-details-section .col-lg-6 p {
+  line-height: 30px;
+}
+.about-page .details-section .main-details-section .detail-header-1:before {
+  content: "";
+  display: inline-block;
+  background-color: white;
+  width: 70px;
+  height: 1px;
+  margin-right: 10px;
+}
+.about-page .question-request-section {
+  margin-bottom: 65px;
+}
+.about-page .question-request-section .behind-content-3 {
+  width: 300px;
+  height: 120px;
+  background-color: var(--brown);
+  position: absolute;
+  top: 1655px;
+  right: 80px;
+  z-index: 1;
+}
+.about-page .question-request-section .main-question-request-section {
+  position: relative;
+  z-index: 100;
+  margin-top: 200px;
+  min-height: 200px;
+  padding: 60px;
+  background: rgba(127, 30, 123, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-page .contact-bg {
+  background-image: url(../../images/contact-page-side-bg.png);
+  background-size: cover;
+  width: 50%;
+}
+.contact-page .contact-bg .glass-effect {
+  background-color: rgba(253, 113, 113, 0.1);
+  background-blend-mode: overlay;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
 }

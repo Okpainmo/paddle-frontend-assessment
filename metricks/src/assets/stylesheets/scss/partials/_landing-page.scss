@@ -105,23 +105,11 @@
       }
     }
   }
-  footer {
-    margin-top: 90px;
-    height: 200px;
+  .base {
+    height: 210px;
     overflow: hidden;
-    color: var(--grey_a);
-    a {
-      color: var(--grey_a);
-      &:hover {
-        color: white;
-        transition: color ease 0.75s;
-      }
-    }
-    i:hover {
-      color: white;
-      transition: color ease 0.75s;
-    }
-    .glass-bg {
+    margin-top: 100px;
+    .round-glass-bg {
       width: 1200px;
       height: 1200px;
       border-radius: 100%;

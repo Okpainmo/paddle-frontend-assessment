@@ -1,0 +1,15 @@
+footer {
+  margin: 0 0 30px;
+  color: #a6a8aa;
+  a {
+    color: #a6a8aa;
+    &:hover {
+      color: white;
+      transition: color ease 0.75s;
+    }
+  }
+  i:hover {
+    color: white;
+    transition: color ease 0.75s;
+  }
+}
