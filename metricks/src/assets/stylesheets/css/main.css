@@ -358,9 +358,6 @@ footer i:hover {
   color: var(--blue-deep);
   transform: translate(-30px, -75px);
 }
-.contact .form-section .hide {
-  display: none !important;
-}
 .contact .form-section h3 {
   line-height: 40px;
 }
@@ -391,8 +388,76 @@ footer i:hover {
 .contact .form-section form button {
   background-color: var(--blue-light);
   margin-bottom: 100px;
-  padding: 1rem 50px;
+  padding: 0.7rem 70px;
 }
 .contact .form-section form button:hover {
   border-color: var(--blue-light);
+}
+
+.github-page {
+  position: relative;
+  z-index: 10000;
+}
+.github-page .main-top .glass-bg-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 60%;
+  height: 350px;
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+.github-page .main-top .behind-content-1 {
+  width: 250px;
+  height: 150px;
+  background-color: var(--brown);
+  position: absolute;
+  top: 205px;
+  left: 470px;
+  z-index: 1;
+}
+.github-page .main-top .page-intro {
+  padding: 75px 50px 50px 200px;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 100px;
+}
+.github-page .main-top .page-intro .about:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  transform: translateY(-5px);
+}
+.github-page .main-top .page-intro h1 {
+  padding-left: 100px;
+  font-size: 50px;
+}
+.github-page .repo-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+.github-page .repo-wrapper .repo-detail {
+  min-height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 25px 40px;
+}
+.github-page .repo-wrapper .repo-detail .repo-avatar img {
+  width: 118px;
+  height: 118px;
+  border-radius: 100%;
+}
+.github-page .repo-wrapper .repo-detail .stars-count,
+.github-page .repo-wrapper .repo-detail .issues-count {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: var(--brown);
 }

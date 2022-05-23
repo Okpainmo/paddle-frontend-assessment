@@ -31,12 +31,6 @@
       transform: translate(-30px, -75px);
     }
 
-    // class for hiding contact pop-up
-
-    .hide {
-      display: none !important;
-    }
-
     h3 {
       line-height: 40px;
       &:after {
@@ -62,7 +56,7 @@
       button {
         background-color: var(--blue-light);
         margin-bottom: 100px;
-        padding: 1rem 50px;
+        padding: 0.7rem 70px;
         &:hover {
           border-color: var(--blue-light);
         }
