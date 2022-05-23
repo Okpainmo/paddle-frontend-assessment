@@ -453,7 +453,7 @@ footer i:hover {
 .github-page .repo-wrapper .repo-detail .repo-avatar img {
   width: 118px;
   height: 118px;
-  border-radius: 100%;
+  border-radius: 7px;
 }
 .github-page .repo-wrapper .repo-detail .stars-count,
 .github-page .repo-wrapper .repo-detail .issues-count {

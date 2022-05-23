@@ -1,34 +1,42 @@
 import React from 'react';
-import avatar from '../../../images/dots.png';
+// import avatar from '../../../images/dots.png';
 
-function Repository() {
+function Repository({ repos }) {
+  console.log(repos);
+
   return (
-    <section className="repo-wrapper">
-      <h1 className="mb-4">Repositories</h1>
-      <div className="repo-detail d-flex align-items-center">
-        <div className="repo-avatar">
-          <img src={avatar} alt="repository avatar" />
-        </div>
-        <div
-          className="more-repo-details d-flex flex-column ms-5"
-          style={{ fontSize: '14px' }}
-        >
-          <h5 className="repo-name fw-bold">Lorem, ipsum dolor.</h5>
-          <p className="repo-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-            atque molestias sint quod et? Incidunt fugiat nesciunt ex vitae
-            tenetur!
-          </p>
-          <section className="stats d-flex gap-4">
-            <div className="stars-count fw-bold">20</div>
-            <div className="issues-count fw-bold">500</div>
-            <div className="submission-interval">
-              submitted 30 days ago by repo owner
+    <>
+      {repos.items.map(function (each) {
+        const { id, owner, description, stargazers_count, open_issues_count } =
+          each;
+        return (
+          <div key={id} className="mb-5">
+            <div className="repo-detail d-flex align-items-center">
+              <div className="repo-avatar">
+                <img src={owner.avatar_url} alt="repository avatar" />
+              </div>
+              <div
+                className="more-repo-details d-flex flex-column ms-5"
+                style={{ fontSize: '14px' }}
+              >
+                <h5 className="repo-name fw-bold">{owner.login}</h5>
+                <p className="repo-description">{description}</p>
+                <section className="stats d-flex gap-4 align-items-center">
+                  <div className="stars-count fw-bold">{stargazers_count}</div>
+                  <div className="issues-count fw-bold">
+                    {open_issues_count}
+                  </div>
+                  <div className="submission-interval">
+                    submitted 30 days ago by{' '}
+                    <span className="fw-bold">{owner.login}</span>
+                  </div>
+                </section>
+              </div>
             </div>
-          </section>
-        </div>
-      </div>
-    </section>
+          </div>
+        );
+      })}
+    </>
   );
 }
 

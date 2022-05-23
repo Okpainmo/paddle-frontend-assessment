@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../global-components/Navbar';
 import Repository from './components/Repository';
 
 function GithubStarsPage() {
+  const [repos, setRepos] = useState([]);
+
+  const url =
+    'https://api.github.com/search/repositories?q=created:>2022-04-23&sort=stars&order=desc';
+
+  async function getProfiles() {
+    const response = await fetch(url);
+    const loadRepos = await response.json();
+    setRepos(loadRepos);
+  }
+
+  useEffect(function () {
+    getProfiles();
+  }, []);
+
   return (
     <main className="github-page">
       <Navbar />
@@ -20,7 +35,10 @@ function GithubStarsPage() {
           </h1>
         </section>
       </section>
-      <Repository />
+      <section className="repo-wrapper">
+        <h1 className="mb-4 fw-bold">Repositories</h1>
+        <Repository repos={repos} />
+      </section>
     </main>
   );
 }
