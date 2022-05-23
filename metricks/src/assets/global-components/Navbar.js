@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/metricks-logo_purple-bg.png';
 
-function Navbar() {
+function Navbar({ showContactPage }) {
   return (
     <nav className="navbar navbar-expand-lg py-3">
       <div className="container-fluid">
@@ -40,15 +40,16 @@ function Navbar() {
                 Github
               </Link>
             </li>
-            <li
-              className="nav-item px-4 ms-4 me-5 rounded-pill"
-              style={{
-                backgroundColor: 'var(--blue-light)',
-              }}
-            >
-              <Link to="/contact" className="nav-link">
+            <li className="nav-item ms-4 me-5" onClick={showContactPage}>
+              <button
+                className="nav-link btn rounded-pill px-4 "
+                style={{
+                  backgroundColor: 'var(--blue-light)',
+                  color: 'white',
+                }}
+              >
                 Contact
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

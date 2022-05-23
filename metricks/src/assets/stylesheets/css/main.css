@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+button:hover {
+  border-color: var(--blue-deep) !important;
+}
+
 nav {
   color: white !important;
 }
@@ -36,6 +40,12 @@ nav a {
 }
 nav .navbar-brand {
   margin-left: 60px;
+}
+nav button {
+  border-color: var(--blue-deep) !important;
+}
+nav button:hover {
+  border-color: var(--blue-deep) !important;
 }
 nav .nav-text {
   position: relative;
@@ -318,15 +328,71 @@ footer i:hover {
   -webkit-backdrop-filter: blur(10px);
 }
 
-.contact-page .contact-bg {
-  background-image: url(../../images/contact-page-side-bg.png);
-  background-size: cover;
-  width: 50%;
+.contact {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
-.contact-page .contact-bg .glass-effect {
+.contact .glass-effect {
   background-color: rgba(253, 113, 113, 0.1);
-  background-blend-mode: overlay;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  width: 100%;
+  min-height: 100vh;
+}
+.contact .form-section {
+  background-image: url(../../images/Path\ 1.svg);
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+}
+.contact .form-section .close-button {
+  position: absolute;
+  background-color: white;
+  border-radius: 100%;
+  border: none;
+  height: 60px;
+  width: 60px;
+  z-index: 100;
+  color: var(--blue-deep);
+  transform: translate(-30px, -75px);
+}
+.contact .form-section .hide {
+  display: none !important;
+}
+.contact .form-section h3 {
+  line-height: 40px;
+}
+.contact .form-section h3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--blue-deep), var(--purple-deep_a));
+  top: 220px;
+  right: 220px;
+}
+.contact .form-section form {
+  margin-left: 60px;
+  color: white;
+}
+.contact .form-section form input {
+  color: var(--grey_a);
+  border: none;
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+.contact .form-section form button {
+  background-color: var(--blue-light);
+  margin-bottom: 100px;
+  padding: 1rem 50px;
+}
+.contact .form-section form button:hover {
+  border-color: var(--blue-light);
 }

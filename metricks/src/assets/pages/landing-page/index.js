@@ -1,10 +1,101 @@
 import React from 'react';
-// import Footer from '../../global-components/Footer';
 import RoundedBase from './components/RoundedBase';
+// import logo from '../../images/metricks-logo_purple-bg.png';
+// import { Link } from 'react-router-dom';
+
+import { useState } from 'react';
+import Navbar from '../../global-components/Navbar';
 
 function LandingPage() {
+  const [show, setShow] = useState(false);
+
+  // close contact pop-up
+
+  function hideContactPage() {
+    setShow(!show);
+    console.log('setshow is good');
+  }
+
+  function showContactPage() {
+    setShow(!show);
+    console.log('setshow is good');
+  }
+
   return (
     <>
+      {/* contact section */}
+
+      <section
+        className="contact flex-row"
+        style={{ display: show ? 'flex' : 'none' }}
+      >
+        <aside className="glass-effect w-50"></aside>
+        <section className="form-section w-50">
+          <button className="close-button" onClick={hideContactPage}>
+            <i className="bi bi-arrow-right fs-3"></i>
+          </button>
+          <h3 className="w-75 text-center ms-5">
+            Hey, we are still in the works, <br /> but you can send us a
+            message!
+          </h3>
+          <form action="log.com" className="w-75">
+            <div className="form-group mt-5">
+              <label htmlFor="first-name">First name</label>
+              <input
+                id="first-name"
+                type="text"
+                className="form-control mt-3"
+                name="firstName"
+                placeholder="Enter your first name"
+              />
+            </div>
+            <div className="form-group mt-4">
+              <label htmlFor="last-name">Last name</label>
+              <input
+                id="last-name"
+                type="text"
+                className="form-control mt-3"
+                name="lastName"
+                placeholder="Enter your last name"
+              />
+            </div>
+            <div className="form-group mt-4">
+              <label htmlFor="email-address">Email address</label>
+              <input
+                id="email-address"
+                type="text"
+                className="form-control mt-3"
+                name="emailAddress"
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div className="form-group mt-4">
+              <label htmlFor="help">Tell us what you need help with</label>
+              <textarea
+                id="help"
+                type="text"
+                className="form-control mt-3"
+                name="Help"
+                placeholder="Enter a topic like, 'channel problem...'"
+                rows="6"
+              ></textarea>
+            </div>
+            <button
+              type="button"
+              className="btn btn-lg text-white text-uppercase mt-5 rounded-pill fs-5s"
+            >
+              Send Now
+            </button>
+          </form>
+        </section>
+      </section>
+
+      {/* navbar */}
+
+      <Navbar showContactPage={showContactPage} />
+
+      {/* main landing page content */}
+
       <main className="container-fluid landing-page">
         <section className="banner">
           <div className="lead-text fs-1 text-center mt-5 text-uppercase fw-bold">

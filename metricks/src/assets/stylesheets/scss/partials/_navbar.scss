@@ -6,6 +6,12 @@ nav {
   .navbar-brand {
     margin-left: 60px;
   }
+  button {
+    border-color: var(--blue-deep) !important;
+    &:hover {
+      border-color: var(--blue-deep) !important;
+    }
+  }
   .nav-text {
     position: relative;
     &:after {
