@@ -37,7 +37,7 @@ function GithubStarsPage() {
       </section>
       <section className="repo-wrapper">
         <h1 className="mb-4 fw-bold">Repositories</h1>
-        <Repository repos={repos} />
+        <Repository repository={repos} />
       </section>
     </main>
   );

@@ -19,8 +19,4 @@ This project is hosted live on netlify. Click on this link :point_right: https:/
 5. Google fonts
 6. Github APIs.
 
-## Some screenshots from the project.
-
-![Project screenshot](./opensky-flight-dashboard/src/assets/images/admin-login.png)
-![Project screenshot](./opensky-flight-dashboard/src/assets/images/admin-login-mobile.png)
-![Project screenshot](./opensky-flight-dashboard/src/assets/images/admin-login-ipad.png)
+> I could complete the data fetching and responsiveness of the landing page because of time constraint.

@@ -1,19 +1,19 @@
 import React from 'react';
-// import avatar from '../../../images/dots.png';
+// import avatar from '../../../images/dots.png';s
 
-function Repository({ repos }) {
-  console.log(repos);
+function Repository({ repository }) {
+  console.log(repository);
 
   return (
     <>
-      {repos.items.map(function (each) {
+      {/* {repository.items.map(function (eachItem) {
         const { id, owner, description, stargazers_count, open_issues_count } =
-          each;
+          eachItem;
         return (
           <div key={id} className="mb-5">
             <div className="repo-detail d-flex align-items-center">
               <div className="repo-avatar">
-                <img src={owner.avatar_url} alt="repository avatar" />
+                <img src={owner.avatar_url} alt="repository avatar" />s
               </div>
               <div
                 className="more-repo-details d-flex flex-column ms-5"
@@ -35,7 +35,7 @@ function Repository({ repos }) {
             </div>
           </div>
         );
-      })}
+      })} */}
     </>
   );
 }
