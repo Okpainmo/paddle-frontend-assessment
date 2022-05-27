@@ -20,8 +20,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(../../images/Path\ 1.svg);
-  background-size: cover;
   color: white !important;
 }
 
@@ -68,7 +66,7 @@ nav .nav-text:hover:after {
 }
 
 footer {
-  margin: 0 0 30px;
+  padding: 0 0 30px;
   color: #a6a8aa;
 }
 footer a {
@@ -84,6 +82,8 @@ footer i:hover {
 }
 
 .landing-page {
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
   position: relative;
   z-index: 10;
 }
@@ -219,6 +219,8 @@ footer i:hover {
 }
 
 .about-page {
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
   position: relative;
   z-index: 10;
 }
@@ -231,7 +233,7 @@ footer i:hover {
   display: block;
   z-index: 10;
   position: absolute;
-  top: 25px;
+  top: 125px;
   left: 0;
 }
 .about-page .main-top .behind-content-1 {
@@ -239,7 +241,7 @@ footer i:hover {
   height: 350px;
   background-image: linear-gradient(to bottom, var(--purple-light), var(--purple-deep_a));
   position: absolute;
-  top: 105px;
+  top: 205px;
   left: 470px;
   z-index: 1;
 }
@@ -277,7 +279,10 @@ footer i:hover {
 }
 .about-page .main-top .page-intro .detail-text-1 {
   width: 40%;
-  margin: 100px 100px 0 auto;
+  margin: 95px 100px 0 auto;
+}
+.about-page .details-section {
+  padding-top: 50px;
 }
 .about-page .details-section .glass-bg-2 {
   background-color: rgba(255, 255, 255, 0.1);
@@ -288,7 +293,7 @@ footer i:hover {
   display: block;
   z-index: 10;
   position: absolute;
-  top: 885px;
+  top: 1050px;
   right: 0;
 }
 .about-page .details-section .behind-content-2 {
@@ -296,7 +301,7 @@ footer i:hover {
   height: 300px;
   background-image: linear-gradient(to bottom, var(--blue-deep), var(--purple-deep_b));
   position: absolute;
-  top: 960px;
+  top: 1160px;
   right: 290px;
   z-index: 1;
 }
@@ -324,7 +329,7 @@ footer i:hover {
   height: 120px;
   background-image: linear-gradient(to bottom, var(--brown), var(--purple-deep_b));
   position: absolute;
-  top: 1655px;
+  bottom: 285px;
   right: 80px;
   z-index: 1;
 }
@@ -406,6 +411,8 @@ footer i:hover {
 }
 
 .github-page {
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
   position: relative;
   z-index: 10000;
 }
@@ -466,6 +473,12 @@ footer i:hover {
   height: 118px;
   border-radius: 7px;
 }
+.github-page .repo-wrapper .repo-detail .repo-name a {
+  color: white;
+}
+.github-page .repo-wrapper .repo-detail .repo-name a:hover {
+  text-decoration: underline;
+}
 .github-page .repo-wrapper .repo-detail .stars-count,
 .github-page .repo-wrapper .repo-detail .issues-count {
   padding: 5px 15px;
@@ -473,7 +486,7 @@ footer i:hover {
   background-color: var(--brown);
 }
 .github-page .repo-wrapper .load-more-repositories-btn button {
-  background-color: var(--blue-deep);
+  background-color: var(--blue-light);
   color: white;
   padding: 15px 40px;
 }

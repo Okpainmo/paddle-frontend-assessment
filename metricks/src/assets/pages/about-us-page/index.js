@@ -6,8 +6,8 @@ import dots from '../../images/dots.png';
 function AboutPage() {
   return (
     <>
-      <Navbar />
       <main className="about-page">
+        <Navbar />
         <section className="main-top">
           {/* elements for implementing glassmorphism effect */}
           <div className="glass-bg-1"></div>

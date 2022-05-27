@@ -19,7 +19,9 @@ function Repository({ repository }) {
                 className="more-repo-details d-flex flex-column ms-5"
                 style={{ fontSize: '14px' }}
               >
-                <h5 className="repo-name fw-bold">{owner.login}</h5>
+                <h5 className="repo-name fw-bold">
+                  <a href={owner.html_url}>{owner.login}</a>
+                </h5>
                 <p className="repo-description">{description}</p>
                 <section className="stats d-flex gap-4 align-items-center">
                   <div className="stars-count fw-bold">{stargazers_count}</div>
