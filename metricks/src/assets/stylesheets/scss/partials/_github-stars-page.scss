@@ -70,5 +70,12 @@
         background-color: var(--brown);
       }
     }
+    .load-more-repositories-btn {
+      button {
+        background-color: var(--blue-deep);
+        color: white;
+        padding: 15px 40px;
+      }
+    }
   }
 }

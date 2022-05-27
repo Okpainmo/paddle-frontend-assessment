@@ -6,14 +6,14 @@ function Repository({ repository }) {
 
   return (
     <>
-      {/* {repository.items.map(function (eachItem) {
+      {repository.items.map(function (eachItem) {
         const { id, owner, description, stargazers_count, open_issues_count } =
           eachItem;
         return (
           <div key={id} className="mb-5">
             <div className="repo-detail d-flex align-items-center">
               <div className="repo-avatar">
-                <img src={owner.avatar_url} alt="repository avatar" />s
+                <img src={owner.avatar_url} alt="repository avatar" />
               </div>
               <div
                 className="more-repo-details d-flex flex-column ms-5"
@@ -35,7 +35,7 @@ function Repository({ repository }) {
             </div>
           </div>
         );
-      })} */}
+      })}
     </>
   );
 }
