@@ -1,12 +1,15 @@
 @use '../utilities/mixins' as mix;
 
 .about-page {
+  background-image: url(../../images/Path\ 1.svg);
+  background-size: cover;
   position: relative;
   z-index: 10;
   .main-top {
+    // padding-top: 100px;
     .glass-bg-1 {
       @include mix.custom-glass(60%, 525px);
-      top: 25px;
+      top: 125px;
       left: 0;
     }
     .behind-content-1 {
@@ -18,7 +21,7 @@
         var(--purple-deep_a)
       );
       position: absolute;
-      top: 105px;
+      top: 205px;
       left: 470px;
       z-index: 1;
     }
@@ -56,16 +59,17 @@
       }
       .detail-text-1 {
         width: 40%;
-        margin: 100px 100px 0 auto;
+        margin: 95px 100px 0 auto;
         // font-size: 13px;
       }
     }
   }
 
   .details-section {
+    padding-top: 50px;
     .glass-bg-2 {
       @include mix.custom-glass(53%, 490px);
-      top: 885px;
+      top: 1050px;
       right: 0;
     }
     .behind-content-2 {
@@ -77,7 +81,7 @@
         var(--purple-deep_b)
       );
       position: absolute;
-      top: 960px;
+      top: 1160px;
       right: 290px;
       z-index: 1;
     }
@@ -114,7 +118,7 @@
         var(--purple-deep_b)
       );
       position: absolute;
-      top: 1655px;
+      bottom: 285px;
       right: 80px;
       z-index: 1;
     }

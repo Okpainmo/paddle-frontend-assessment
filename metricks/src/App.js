@@ -8,13 +8,13 @@ import Pager from './assets/global-components/Pager';
 import LandingPage from './assets/pages/landing-page/index';
 import AboutPage from './assets/pages/about-us-page';
 import GithubStarsPage from './assets/pages/github-stars-page';
-// import ContactPage from './assets/pages/contact-us-page';
-// import BlogHomePage from './assets/pages/blog-home-page';
-// import BlogPostPage from './assets/pages/blog-post-page';
+import ContactPage from './assets/pages/contact-us-page';
+import BlogHomePage from './assets/pages/blog-home-page';
+import BlogPostPage from './assets/pages/blog-post-page';
 
 function App() {
   return (
-    <div>
+    <>
       <ScrollHandler>
         <Pager>
           <Routes>
@@ -24,13 +24,13 @@ function App() {
             <Route path="/github" element={<GithubStarsPage />} />
 
             {/* undone pages */}
-            {/* <Route path="/blog" element={<BlogHomePage />} />
+            <Route path="/blog" element={<BlogHomePage />} />
             <Route path="/post" element={<BlogPostPage />} />
-            <Route path="/contact" element={<ContactPage />} /> */}
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Pager>
       </ScrollHandler>
-    </div>
+    </>
   );
 }
 
