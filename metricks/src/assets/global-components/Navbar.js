@@ -31,7 +31,7 @@ function Navbar({ showContactPage }) {
               </Link>
             </li>
             <li className="nav-item nav-text mx-4">
-              <Link to="/blog" className="nav-link">
+              <Link to="/" className="nav-link">
                 Blog
               </Link>
             </li>

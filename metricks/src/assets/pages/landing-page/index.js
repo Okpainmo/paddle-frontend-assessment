@@ -90,15 +90,15 @@ function LandingPage() {
         </section>
       </section>
 
+      {/* navbar */}
+
+      <Navbar showContactPage={showContactPage} />
+
+      {/* main landing page content */}
+
       <main className="container-fluid landing-page">
-        {/* navbar */}
-
-        <Navbar showContactPage={showContactPage} />
-
-        {/* main landing page content */}
-
         <section className="banner">
-          <div className="lead-text fs-1 text-center mt-5 pt-4 text-uppercase fw-bold">
+          <div className="lead-text fs-1 text-center mt-5 text-uppercase fw-bold">
             Something awesome is <br /> coming soon
           </div>
           <div className="follow-up-text text-center mt-3">

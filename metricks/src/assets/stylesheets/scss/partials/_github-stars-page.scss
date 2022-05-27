@@ -1,8 +1,6 @@
 @use '../utilities/mixins' as mix;
 
 .github-page {
-  background-image: url(../../images/Path\ 1.svg);
-  background-size: cover;
   position: relative;
   z-index: 10000;
   .main-top {
@@ -64,14 +62,7 @@
           border-radius: 7px;
         }
       }
-      .repo-name {
-        a {
-          color: white;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
+
       .stars-count,
       .issues-count {
         padding: 5px 15px;
@@ -81,7 +72,7 @@
     }
     .load-more-repositories-btn {
       button {
-        background-color: var(--blue-light);
+        background-color: var(--blue-deep);
         color: white;
         padding: 15px 40px;
       }
