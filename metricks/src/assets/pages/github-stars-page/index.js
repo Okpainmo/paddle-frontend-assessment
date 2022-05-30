@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../../global-components/Footer';
 import Navbar from '../../global-components/Navbar';
 import Repository from './components/Repository';
+import whitelogo from '../../images/metricks-logo_purple-bg.png';
 
 function GithubStarsPage() {
   const [repos, setRepos] = useState([]);
@@ -30,7 +31,7 @@ function GithubStarsPage() {
 
   return (
     <main className="github-page">
-      <Navbar />
+      <Navbar navLogo={whitelogo} />
       <section className="main-top">
         {/* elements for implementing glassmorphism effect */}
         <div className="glass-bg-1"></div>
@@ -56,13 +57,13 @@ function GithubStarsPage() {
             <Repository repository={repos} />
           )}
         </div>
-        <div className="second-repo-wrapper">
+        {/* <div className="second-repo-wrapper">
           {loading ? (
             <div style={{ padding: '15px 0' }}>Loading repositories...</div>
           ) : (
             <Repository repository={repos} />
           )}
-        </div>
+        </div> */}
         <div className="load-more-repositories-btn text-center pt-3">
           <button className="btn fs-5">Load more repositories</button>
         </div>

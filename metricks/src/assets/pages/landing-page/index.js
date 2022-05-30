@@ -1,6 +1,7 @@
 import React from 'react';
 import RoundedBase from './components/RoundedBase';
-// import logo from '../../images/metricks-logo_purple-bg.png';
+import whitelogo from '../../images/metricks-logo_purple-bg.png';
+
 // import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
@@ -8,6 +9,7 @@ import Navbar from '../../global-components/Navbar';
 
 function LandingPage() {
   const [show, setShow] = useState(false);
+  const isBlog = false;
 
   // close contact pop-up
 
@@ -90,10 +92,14 @@ function LandingPage() {
         </section>
       </section>
 
-      <main className="container-fluid landing-page">
+      <main className="landing-page">
         {/* navbar */}
 
-        <Navbar showContactPage={showContactPage} />
+        <Navbar
+          showContactPage={showContactPage}
+          navLogo={whitelogo}
+          blogSpecifics={isBlog}
+        />
 
         {/* main landing page content */}
 

@@ -1,15 +1,25 @@
 nav {
   color: white !important;
-  a {
-    color: white !important;
-  }
+  // a {
+  //   color: white;
+  // }
   .navbar-brand {
     margin-left: 60px;
   }
   button {
-    border-color: var(--blue-deep) !important;
+    background-color: var(--blue-light) !important;
+    border-color: var(--blue-light) !important;
+    padding: 10px 40px !important;
     &:hover {
-      border-color: var(--blue-deep) !important;
+      border-color: var(--blue-light) !important;
+    }
+  }
+  .blog-nav-btn {
+    color: black;
+    background-color: white !important;
+    border-color: white !important;
+    &:hover {
+      border-color: white !important;
     }
   }
   .nav-text {
