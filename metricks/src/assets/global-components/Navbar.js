@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/metricks-logo_purple-bg.png';
 
-function Navbar({ showContactPage }) {
+function Navbar({ showContactPage, navLogo, blogSpecifics }) {
   return (
     <nav className="navbar navbar-expand-lg py-3">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          <img src={logo} alt="brand-logo" />
+          <img src={navLogo} alt="brand-logo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -26,27 +25,41 @@ function Navbar({ showContactPage }) {
         >
           <ul className="navbar-nav me-5">
             <li className="nav-item nav-text mx-4">
-              <Link to="/about" className="nav-link active" aria-current="page">
+              <Link
+                to="/about"
+                className="nav-link active"
+                aria-current="page"
+                style={{ color: blogSpecifics ? 'black' : 'white' }}
+              >
                 About
               </Link>
             </li>
             <li className="nav-item nav-text mx-4">
-              <Link to="/blog" className="nav-link">
+              <Link
+                to="/blog"
+                className="nav-link"
+                style={{ color: blogSpecifics ? 'black' : 'white' }}
+              >
                 Blog
               </Link>
             </li>
             <li className="nav-item nav-text mx-4">
-              <Link to="/github" className="nav-link">
+              <Link
+                to="/github"
+                className="nav-link"
+                style={{ color: blogSpecifics ? 'black' : 'white' }}
+              >
                 Github
               </Link>
             </li>
             <li className="nav-item ms-4 me-5" onClick={showContactPage}>
               <button
-                className="nav-link btn rounded-pill px-4 "
-                style={{
-                  backgroundColor: 'var(--blue-light)',
-                  color: 'white',
-                }}
+                className={
+                  blogSpecifics
+                    ? 'nav-link btn rounded-pill px-5 blog-nav-btn'
+                    : 'nav-link btn rounded-pill px-5'
+                }
+                style={{ color: blogSpecifics ? 'black' : 'white' }}
               >
                 Contact
               </button>

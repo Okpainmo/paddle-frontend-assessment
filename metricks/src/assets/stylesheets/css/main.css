@@ -34,17 +34,24 @@ button:hover {
 nav {
   color: white !important;
 }
-nav a {
-  color: white !important;
-}
 nav .navbar-brand {
   margin-left: 60px;
 }
 nav button {
-  border-color: var(--blue-deep) !important;
+  background-color: var(--blue-light) !important;
+  border-color: var(--blue-light) !important;
+  padding: 10px 40px !important;
 }
 nav button:hover {
-  border-color: var(--blue-deep) !important;
+  border-color: var(--blue-light) !important;
+}
+nav .blog-nav-btn {
+  color: black;
+  background-color: white !important;
+  border-color: white !important;
+}
+nav .blog-nav-btn:hover {
+  border-color: white !important;
 }
 nav .nav-text {
   position: relative;
@@ -489,4 +496,85 @@ footer i:hover {
   background-color: var(--blue-light);
   color: white;
   padding: 15px 40px;
+}
+
+.blog-home-page {
+  background-color: var(--ice_b);
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  color: black;
+}
+.blog-home-page header {
+  min-height: 250px;
+  padding: 100px 50px 100px 180px;
+  background: transparent linear-gradient(180deg, #210045 0%, #0c0123 100%) 0% 0% no-repeat padding-box;
+}
+.blog-home-page header .glass-bg-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 32%;
+  height: 295px;
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: 105px;
+  left: 0;
+}
+.blog-home-page header .behind-content-1 {
+  width: 150px;
+  height: 220px;
+  background-image: linear-gradient(to bottom, var(--purple-light), var(--purple-deep_a));
+  position: absolute;
+  top: 155px;
+  left: 200px;
+  z-index: 1;
+}
+.blog-home-page header .page-intro {
+  position: relative;
+  z-index: 100;
+  color: white;
+}
+.blog-home-page header .page-intro:after {
+  content: "";
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-image: linear-gradient(var(--blue-deep), var(--purple-deep_a));
+  top: -15px;
+  right: 0;
+}
+.blog-home-page header .page-intro .about {
+  font-size: 12px;
+}
+.blog-home-page header .page-intro .about:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  transform: translateY(-5px);
+}
+.blog-home-page header .page-intro h1 {
+  padding-left: 100px;
+  font-size: 40px;
+}
+.blog-home-page .post-section .search-wrapper .form-wrapper {
+  width: 40%;
+}
+.blog-home-page .post-section .search-wrapper .form-wrapper input {
+  color: var(--grey_a);
+  padding: 10px 20px;
+}
+.blog-home-page .post-section .search-wrapper .form-wrapper i {
+  font-size: 17px;
+  transform: translate(-48px, 10px);
+  position: relative;
+  z-index: 100;
 }

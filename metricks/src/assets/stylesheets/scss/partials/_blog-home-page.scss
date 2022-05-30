@@ -1,3 +1,81 @@
+@use '../utilities/mixins' as mix;
+
 .blog-home-page {
   background-color: var(--ice_b);
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  color: black;
+
+  header {
+    min-height: 250px;
+    padding: 100px 50px 100px 180px;
+    background: transparent linear-gradient(180deg, #210045 0%, #0c0123 100%) 0%
+      0% no-repeat padding-box;
+    .glass-bg-1 {
+      @include mix.custom-glass(32%, 295px);
+      top: 105px;
+      left: 0;
+    }
+    .behind-content-1 {
+      width: 150px;
+      height: 220px;
+      background-image: linear-gradient(
+        to bottom,
+        var(--purple-light),
+        var(--purple-deep_a)
+      );
+      position: absolute;
+      top: 155px;
+      left: 200px;
+      z-index: 1;
+    }
+    .page-intro {
+      position: relative;
+      z-index: 100;
+      color: white;
+      &:after {
+        @include mix.ball-gradient(120px);
+        background-image: linear-gradient(
+          var(--blue-deep),
+          var(--purple-deep_a)
+        );
+        top: -15px;
+        right: 0;
+      }
+      .about {
+        font-size: 12px;
+        &:before {
+          content: '';
+          display: inline-block;
+          margin-right: 5px;
+          width: 50px;
+          height: 1px;
+          background-color: white;
+          transform: translateY(-5px);
+        }
+      }
+      h1 {
+        padding-left: 100px;
+        font-size: 40px;
+      }
+    }
+  }
+  .post-section {
+    .search-wrapper {
+      .form-wrapper {
+        width: 40%;
+        input {
+          color: var(--grey_a);
+          padding: 10px 20px;
+        }
+        i {
+          font-size: 17px;
+          transform: translate(-48px, 10px);
+          position: relative;
+          z-index: 100;
+        }
+      }
+    }
+  }
 }

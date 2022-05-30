@@ -2,12 +2,13 @@ import React from 'react';
 import Footer from '../../global-components/Footer';
 import Navbar from '../../global-components/Navbar';
 import dots from '../../images/dots.png';
+import whitelogo from '../../images/metricks-logo_purple-bg.png';
 
 function AboutPage() {
   return (
     <>
       <main className="about-page">
-        <Navbar />
+        <Navbar navLogo={whitelogo} />
         <section className="main-top">
           {/* elements for implementing glassmorphism effect */}
           <div className="glass-bg-1"></div>
